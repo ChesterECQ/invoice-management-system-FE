@@ -3,16 +3,17 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 
 const Footer : React.FC = () => {
     return (
-        <Box
-          sx={{
-            width: "100%",
+        <footer
+          style ={{
+            width: "auto",
             backgroundColor: "secondary",
             position: "relative",
-            paddingTop: "1rem",
+            padding: '10px 50px',
+            textAlign: "right"
           }}
         >
           <>
-            <Grid container direction="column" alignItems="center">
+            <Grid container direction="row">
               <Grid item xs={12}>
                 <Typography color="textSecondary" variant="subtitle1">
                   {`Invoice Management System @${new Date().getFullYear()} `}
@@ -20,7 +21,7 @@ const Footer : React.FC = () => {
               </Grid>
             </Grid>
           </>
-        </Box>
+        </footer>
       );
     }
 

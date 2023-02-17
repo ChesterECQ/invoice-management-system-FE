@@ -10,7 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 const Navbar : React.FC = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">
+          <AppBar position="static" sx={{backgroundColor: '#DCDCDC', color:'#000'}}>
             <Toolbar>
               <IconButton
                 size="large"

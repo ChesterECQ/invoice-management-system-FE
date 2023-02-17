@@ -1,17 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Layout from './components/layout/layout';
 import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-      <Footer />
+      </Layout>
     </>
   );
 }
