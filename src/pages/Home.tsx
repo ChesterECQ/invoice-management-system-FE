@@ -24,11 +24,8 @@ const Home = () => {
 
   // to handle getting the response from the search value
   const handleSearch = () => {
-    GetInvoiceRecordsService.getInvoicesRecords(searchVal).then((response) => {
-      console.log('response after search ', response)
-      setInvoiceRecords(response.data)
-    })
-  }
+    setSearchVal({searchVal : ""});
+  };
 
   // Boolean to control displaying of table
   const [showTable, setShowTable] = React.useState<boolean>(false);
@@ -46,6 +43,13 @@ const Home = () => {
       setShowTable(true);
     });
   };
+
+  // useEffect to reload table whenever searchterm chagnes
+  React.useEffect(() => {
+    GetInvoiceRecordsService.getInvoicesRecords(searchVal).then((res) => {
+      setInvoiceRecords(res.data);
+    });
+  }, [searchVal]);
 
   return (
     <>
@@ -85,6 +89,7 @@ const Home = () => {
                   placeholder="Search"
                   handleSearchTerm={handleSearchChange}
                   handleButtonClick={handleSearch}
+                  searchTerm={searchVal.searchVal}
                 />
               </Box>
 

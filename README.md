@@ -1,46 +1,152 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact">Assumptions</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-## Available Scripts
+<h1>Invoice Management System</h1>
 
-In the project directory, you can run:
+This is a Invoice Management System where a file is upload and then displayed in a table. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm start`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Built With
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [React] - [React.ts]
+* [Material-UI] - [Material-UI]
+* [Bootstrap]
 
-### `npm test`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- GETTING STARTED -->
+## Getting Started
 
-### `npm run build`
+Below are the Perequisties and installtion needed to able to run this project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+* IDE
+  - Having Visual Studio Code available would make running the project easier.
+    
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repo to your IDE
+   ```sh
+   git clone https://github.com/ChesterECQ/invoice-management-system-FE.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. To Run the project in developement mode, go to the project directory and use the following command
+   ```sh
+   npm start
+   ```
+   Runs the app in the development mode.\
+   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. To run the test script 
+   ```sh
+   npm test
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Launches the test runner in the interactive watch mode.\
+    See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. To build the project 
+   ```sh
+   npm run build
+   ```
+   Builds the app for production to the `build` folder.\
+    It correctly bundles React in production mode and optimizes the build for the best performance.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    The build is minified and the filenames include the hashes.\
+    Your app is ready to be deployed!
 
-## Learn More
+    See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- Assumption -->
+## Assumption
+<p>
+    As there is no exact details regarding what the front end application would look like, the following assumptions were made:
+        <li>This is a single page application.</li>
+        <li>There is no specific search criteria therfore a search would include all column in tha table.</li>
+        <li>As the sample data file is in CSV format, file type that can be uploaded would only be of CSV format.</li>
+</p>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+Chester Ng - chesterng@ecquaria.com
+
+Project Link: [Invoice-Management-System](https://github.com/ChesterECQ/invoice-management-system-FE.git)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

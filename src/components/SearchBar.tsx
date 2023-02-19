@@ -19,7 +19,7 @@ const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps) => {
             value={searchTerm}
           />
           <Button onClick={handleButtonClick} bgcolor='primary'>
-            Search
+            Clear
           </Button>
       </Box>
     </>
