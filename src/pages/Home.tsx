@@ -1,7 +1,9 @@
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import Button from "../components/common/Button";
 import Card from "../components/common/Card";
 import FileUpload from "../components/FileUpload";
+import SearchBar from "../components/SearchBar";
 import Table from "../components/Table";
 import invoiceHeaders from "../components/tableHeaders/InvoiceHeader";
 import Invoice from "../interface/Invoice";
@@ -14,8 +16,22 @@ const Home = () => {
     searchVal: "",
   });
 
+  // To handle Search text changes
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.value);
+    setSearchVal({ searchVal: event.target.value });
+  };
+
+  // to handle getting the response from the search value
+  const handleSearch = () => {
+    GetInvoiceRecordsService.getInvoicesRecords(searchVal).then((response) => {
+      console.log('response after search ', response)
+      setInvoiceRecords(response.data)
+    })
+  }
+
   // Boolean to control displaying of table
-  const [showTable, setShowTable] = React.useState<Boolean>(false);
+  const [showTable, setShowTable] = React.useState<boolean>(false);
 
   // to hold all the rows information in the table
   const [invoiceRecords, setInvoiceRecords] = React.useState<Array<Invoice>>(
@@ -37,10 +53,10 @@ const Home = () => {
       <Card>
         <FileUpload />
       </Card>
-      {/* Table Component */}
+
       <Card>
-        {/* Button to generate first batch of data */}
         <>
+          {/* Button to generate first batch of data */}
           {!showTable && (
             <Button
               onClick={generateTableRecords}
@@ -51,12 +67,36 @@ const Home = () => {
             </Button>
           )}
           {showTable && (
-            <Table
-              tableName="Invoice Records"
-              rows={invoiceRecords}
-              columns={invoiceHeaders}
-              pageSize={10}
-            />
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+              {/* Table Header */}
+              <Box sx={{ mb: 1 }}>
+                <Typography
+                  variant="h4"
+                  color={"primary"}
+                  sx={{ textDecoration: "underline" }}
+                >
+                  Invoice Records
+                </Typography>
+              </Box>
+
+              {/* Search Bar component */}
+              <Box sx={{ my: 1 }}>
+                <SearchBar
+                  placeholder="Search"
+                  handleSearchTerm={handleSearchChange}
+                  handleButtonClick={handleSearch}
+                />
+              </Box>
+
+              {/* Table Component */}
+              <Box>
+                <Table
+                  rows={invoiceRecords}
+                  columns={invoiceHeaders}
+                  pageSize={10}
+                />
+              </Box>
+            </Box>
           )}
         </>
       </Card>
