@@ -109,44 +109,6 @@ Below are the Perequisties and installtion needed to able to run this project.
 
 Chester Ng - chesterng@ecquaria.com
 
-Project Link: [Invoice-Management-System](https://github.com/ChesterECQ/invoice-management-system-FE.git)
+Project Link: [Invoice-Management-System](https://github.com/ChesterECQ/invoice-management-system-FE)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
