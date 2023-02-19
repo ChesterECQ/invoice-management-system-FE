@@ -5,4 +5,5 @@ export default interface DataTableProps {
     columns: GridColDef[];
     pageSize?: number;
     rowsPerPageOptions?: number[];
+    tableName?: string;
 }

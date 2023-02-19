@@ -5,3 +5,9 @@ import SearchVal from '../interface/SearchVal';
 const getInvoicesRecords = (searchVal : SearchVal) : Promise<any> => {
     return http.post("/invoice/getInvoiceRecords", searchVal)
 }
+
+const GetInvoiceRecordsService = {
+    getInvoicesRecords,
+  };
+  
+  export default GetInvoiceRecordsService;
