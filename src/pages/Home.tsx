@@ -154,8 +154,7 @@ const Home = () => {
         <Table
           rows={rows}
           columns={invoiceHeaders}
-          pageSize={5}
-          rowsPerPageOptions={[5, 10, 25]}
+          pageSize={10}
         />
       </Card>
     </>

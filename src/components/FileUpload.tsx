@@ -1,13 +1,13 @@
-import React from 'react';
-import Button from './common/Button';
-import { LinearProgress } from '@mui/material';
-import { styled } from '@mui/system';
+import React from "react";
+import Button from "./common/Button";
+import { Box, LinearProgress } from "@mui/material";
+import { styled } from "@mui/system";
 
-import FileUploadService from '../service/FileUploadService';
+import FileUploadService from "../service/FileUploadService";
 
 // styling for progress bar
 const StyledLinearProgress = styled(LinearProgress)({
-  width: '100%',
+  width: "100%",
   height: 10,
   borderRadius: 5,
   marginTop: 10,
@@ -19,7 +19,7 @@ const FileUpload: React.FC = () => {
   // to hold the progress bar
   const [progress, setProgress] = React.useState(0);
   // to hold the success / fail message
-  const [message, setMessage] = React.useState<string>('');
+  const [message, setMessage] = React.useState<string>("");
 
   // Function to handle file select
   const handleSelectFile = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,7 +30,7 @@ const FileUpload: React.FC = () => {
   };
 
   const handleUploadFile = () => {
-    console.log('entering this button');
+    console.log("entering this button");
     setProgress(0);
     if (!currentFile) return;
 
@@ -46,7 +46,7 @@ const FileUpload: React.FC = () => {
         if (err.response && err.response.data && err.response.data.message) {
           setMessage(err.response.data.message);
         } else {
-          setMessage('Could not upload the File!');
+          setMessage("Could not upload the File!");
         }
 
         setCurrentFile(undefined);
@@ -55,32 +55,33 @@ const FileUpload: React.FC = () => {
 
   return (
     <>
-      {/* input to select file */}
-      <label htmlFor='Select File'>
-        <input type='file' onChange={handleSelectFile} />
-      </label>
+      <Box sx={{display : 'flex', justifyContent: "space-between"}}>
+        {/* input to select file */}
+        <label htmlFor="Select File">
+          <input type="file" onChange={handleSelectFile} />
+        </label>
 
-      {/* Button to upload file */}
-      <Button
-        disabled={!currentFile}
-        onClick={handleUploadFile}
-        variant='contained'
-        bgcolor='primary'
-      >
-        Upload
-      </Button>
-
+        {/* Button to upload file */}
+        <Button
+          disabled={!currentFile}
+          onClick={handleUploadFile}
+          variant="contained"
+          bgcolor="primary"
+        >
+          Upload
+        </Button>
+      </Box>
       {/* Progress Bar */}
       {currentFile && (
         <div>
-          <StyledLinearProgress variant='determinate' value={progress} />
+          <StyledLinearProgress variant="determinate" value={progress} />
           {progress} %
         </div>
       )}
 
       {/* Message to show that file uplaod is successful or not */}
       {message && (
-        <div className='alert alert-secondary mt-3' role='alert'>
+        <div className="alert alert-secondary mt-3" role="alert">
           {message}
         </div>
       )}
