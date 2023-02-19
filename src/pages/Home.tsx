@@ -54,11 +54,11 @@ const Home = () => {
   return (
     <>
       {/* File upload Component */}
-      <Card>
+      <Card data-test="fileUpload">
         <FileUpload />
       </Card>
 
-      <Card>
+      <Card data-test="invoice records">
         <>
           {/* Button to generate first batch of data */}
           {!showTable && (

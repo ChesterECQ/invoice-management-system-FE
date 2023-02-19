@@ -2,7 +2,6 @@ import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 
 import DataTableProps from "../interface/TableProps";
-import { Box, Typography } from "@mui/material";
 
 const Table = (props: DataTableProps) => {
   const { rows, columns, pageSize } = props;
